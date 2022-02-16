@@ -1,0 +1,198 @@
+#btn_shoot{
+    background-color: white;
+    border: 1px solid red;
+}
+#sun{
+    background-color: #fce570;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    left: 50%;
+    margin-left: -25px;
+}
+#mercury{
+    background-color: #555e72;
+    width: 2.61px;
+    height: 2.61px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -1.305px;
+    left: 50%;
+    margin-left: -1.305px;
+
+    animation: mercury-orbit 2.4s infinite linear;
+}
+#venus{
+    /* Year: 225 days */
+    background-color: #c2b280;
+    width: 9.52px;
+    height: 9.52px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -4.76px;
+    left: 50%;
+    margin-left: -4.76px;
+
+    animation: venus-orbit 6.16s infinite linear;
+}
+#earth{
+    background-color: #287AB8;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+    left: 50%;
+    margin-left: -5px;
+
+    animation: earth-orbit 10s infinite linear;
+}
+#moon{
+    background-color: gray;
+    width: 1.67px;
+    height: 1.67px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -0.835px;
+    left: 50%;
+    margin-left: -0.835px;
+
+    animation: moon-orbit 0.739s infinite linear;
+}
+#mars{
+    background-color: #9C2E35;
+    width: 5.34px;
+    height: 5.34px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -2.67px; /* Half this element's height */
+    left: 50%;
+    margin-left: -2.67px;
+
+    animation: mars-orbit 18.8s infinite linear;
+}
+
+@keyframes mercury-orbit {
+    /* distance from sun: 0.4 AU */
+    from{
+       transform: rotate(360deg) translate(40px);
+    }
+    to{
+       transform: rotate(0deg) translate(40px);
+    }
+}
+
+@keyframes venus-orbit {
+    /* distance from sun: 0.7 AU */
+    from{
+       transform: rotate(360deg) translate(70px);
+    }
+    to{
+       transform: rotate(0deg) translate(70px);
+    }
+}
+
+@keyframes moon-orbit {
+    /* 5.2574px to scale */
+    from{
+       transform: rotate(360deg) translate(7px);
+    }
+    to{
+       transform: rotate(0deg) translate(7px);
+    }
+}
+
+@keyframes earth-orbit {
+    from{
+       transform: rotate(360deg) translate(100px); /* rotate(0deg); */
+    }
+    to{
+       transform: rotate(0deg) translate(100px); /* rotate(131400deg); 365days * 360deg */
+    }
+}
+
+@keyframes mars-orbit {
+    from{
+        transform: rotate(360deg) translate(150px);
+    }
+    to{
+        transform: rotate(0deg) translate(150px);
+    }
+}
+
+/* @keyframes jupiter-orbit {
+    distance from sun: 5.2 AU
+    from{
+        transform: rotate(360deg) translate(520px);
+    }
+    to{
+        transform: rotate(0deg) translate(520px);
+    }
+} */
+
+#mars-orbit{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid grey;
+
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -150px;
+}
+#earth-orbit{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 0.5px solid grey;
+
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    margin-top: -100px;
+    left: 50%;
+    margin-left: -100px;
+}
+
+#asteroid{
+    background-color: brown;
+    width: 4px;
+    height: 6px;
+    border-radius: 60%;
+
+	position: absolute;
+    top: 50%;
+    margin-top: -3px; /* Half this element's height */
+    left: 50%;
+    margin-left: -325px;
+}
+
+.animate-asteroid {
+    animation: asteroid-shoot 3s linear;
+}
+
+@keyframes asteroid-shoot {
+    from{
+        transform: translate(0px);
+    }
+    to{
+        transform: translate(300px);
+    }
+}
